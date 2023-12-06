@@ -1,6 +1,7 @@
 # Recipe-Recommendation
 ## Things left in project:
 Paste ERD in ppt
+Send trigger code
 1. Macros recommendation option (Akshay)
 2. User log table (Akshay)
 3. Graphs (Ram)
