@@ -11,5 +11,7 @@ c. what is recipe-nutritional view -> piechart of nutritional info
 
 4. Remaining Features to code: (Akshay)
 a) Make a selection of recipe-> stored in log -> display % cost saved
-  
-5. PPT (Ram)
+
+5. User adding recipe (invokes trigger) (Akshay)
+
+6. PPT (Ram)
