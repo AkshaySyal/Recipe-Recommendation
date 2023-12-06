@@ -1,7 +1,6 @@
 # Recipe-Recommendation
 ## Things left in project:
-Paste ERD in ppt,
-Send trigger code
+
 
 1. User log table (Akshay)
 2. Graphs (Ram)
