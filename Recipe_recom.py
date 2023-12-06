@@ -127,6 +127,23 @@ def recomm_alle(UserId):
         print('Serving weight : ',a1[3])
         print('Servings       : ',a1[4])
         print()
+
+def recomm_macro(macros):
+    cursor.callproc('RecipeRecommUserAllergyFree',macros)
+        # print out the result
+    for result in cursor.stored_results():
+        a = result.fetchall()
+    for a1 in a:
+        print('-----------------------------------------------------------')
+        print('Recipe Name    : ',a1[1])
+        print('-----------------------------------------------------------')
+        print('Steps          : ')
+        for a2 in re.split("',",a1[2]):
+            print('> ',a2)
+        print()
+        print('Serving weight : ',a1[3])
+        print('Servings       : ',a1[4])
+        print()
         
 
 while(True):
@@ -169,11 +186,11 @@ while(True):
             
             while(True):
                 print('1 : Do you Want to check your Profile: Enter 1')
-                print('2 : Do you Want Recommendation that relates your Diet prefernce : Enter 2')
+                print('2 : Do you Want Recommendation that relates your Diet preference : Enter 2')
                 print('3 : Do you Want Recommendation that relates your Allergies : Enter 3')
                 print('4 : Do you Want Recommendation with macro prefernces : Enter 4')
                 print('0 : Do you Want LogOut : Enter 0')
-                after_login = input("Enter from about list")
+                after_login = input("Enter from about list ")
                 if after_login == '1':
                     print('Your profile!')
                     check_profile(session['id'])
@@ -184,7 +201,11 @@ while(True):
                     print('Recommendation Allergy')
                     recomm_alle(session['id'])
                 elif after_login == '4':
+                    macros_str = input('Enter macros in the order (calories, protein, carbs and fats): ')
+                    macors_str_list = macros_str.split()
+                    macros_int_list = list(map(int, macors_str_list))
                     print('Recommendation macro preference')
+                    recomm_macro(macros_int_list)
                 elif after_login == '0':
                     print('Logging out...')
                     exit()
