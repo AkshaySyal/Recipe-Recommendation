@@ -1,12 +1,2 @@
 # Recipe-Recommendation
-## Things left in project:
-
-
-1. Graphs (Ram)
-a. Cost saved per transaction, day, month, year [roll up on User_Recipe_Log] 
-b. Pie chart showing macros eaten of a user on a particular day
-c. what is recipe-nutritional view -> piechart of nutritional info
-
-2. User adding recipe (invokes trigger) (Akshay)
-
-3. PPT (Ram)
+https://docs.google.com/presentation/d/1TwcdZvvGPquKAV_5mXVrmjGZI4U7i2KAiAZNtsvJL0k/edit?usp=sharing
